@@ -80,12 +80,12 @@ span.psw {
 
   <div class="container">
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" id="user-name" placeholder="Enter Username" name="uname" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" id = "password" placeholder="Enter Password" name="psw" required>
         
-    <button type="submit">Login</button>
+    <button id= "login-button" type="submit">Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
@@ -96,6 +96,26 @@ span.psw {
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form>
+<script>
+  // Get value of username and password from form
+   let userName =document.getElementById('user-name');
+   let password = document.getElementById('password');
+    console.log(userName, password);
+
+    document.getElementById("login-button").addEventListener("click", function(e){
+      e.preventDefault();
+      let userName =document.getElementById('user-name').value;
+      let password = document.getElementById('password').value;
+      console.log(userName, password);
+      if(userName == "hung" && password == "12345"){
+        alert("Logged in successfully")
+      }else{
+        alert("Login failed")
+      }
+      
+    })
+
+</script>
 
 </body>
 </html>
