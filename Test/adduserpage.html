@@ -62,6 +62,9 @@ button:hover {
 /* Add padding to container elements */
 .container {
   padding: 16px;
+  width:400px ;
+  padding: 16px;
+  margin: auto;
 }
 
 /* Clear floats */
@@ -87,16 +90,16 @@ button:hover {
     <hr>
 
     <label for="firstname"><b>First name</b></label>
-    <input type="text" placeholder="Enter firstname" name="name" required>
+    <input type="text" id="first-name" placeholder="Enter firstname" name="name" required>
     <label for="lastname"><b>Last name</b></label>
-    <input type="text" placeholder="Enter lastname" name="name" required>
+    <input type="text" id="last-name" placeholder="Enter lastname" name="name" required>
     
 
     <label for="User"><b>User name</b></label>
-    <input type="text" placeholder="Enter User name" name="User" required>
+    <input type="text" id="user-name" placeholder="Enter User name" name="User" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" id="password" placeholder="Enter Password" name="psw" required>
     
     <label>
       <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
@@ -106,9 +109,10 @@ button:hover {
 
     <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>
-      <button style="color: #ffff" type="submit" class="signupbtn"><a href="index.html" target="_blank">Add User</a></button>
+      <button id="add-user" style="color: #ffff" type="submit" class="signupbtn">Add User</button>
     </div>
   </div>
 </form>
+
 </body>
 </html>
