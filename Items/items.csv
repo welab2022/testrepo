@@ -1,0 +1,6 @@
+item-id, item-name, item-description, date-created, date-update, quantity, note
+1, item 1, this is item 1, 16/05/2022, 19/05/2022, 1, this item is a handmade product
+2, item 2, this is item 2, 15/05/2022, 19/05/2022, 2, this item is a handmade product
+3, item 3, this is item 3, 19/04/2022, 19/05/2022, 1000, this item is a handmade product
+4, item 4, this is item 4, 19/05/2021, 10/05/2022, 20, this item is a handmade product
+5, item 5, this is item 5, 19/05/2022, 11/05/2022, 13, this item is a handmade product
