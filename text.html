@@ -8,33 +8,55 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="wrapper">
-        <form class="login">    
-            <h1>Login to continue</h1>
-            <div class="form-group">
-                Username: <input type="text" class="form-group" placeholder="Username" required>
-            </div>
-            <div class="form-group">
-                Password: <input type="password" class="form-group" placeholder="Password" required>
-            </div>
-            <input type="submit" value="Submit" class="submit"> 
+    <h1>Login Form</h1>
+   <div id="wrapper">
+        <form id="form1" method="post" action="" onsubmit="return check_form();">
+            <div id="logo"><img id="img" src="logo.jpg" alt="logo" width="700px" height="350px"></div>
+            <p class="textcontent" id="login_label">Log in to continue</p>
+            <span class="content">Username: </span> <input type="text" class="content" id="name" placeholder="Enter Username">
+            <br>
+            <span class="content">Password: </span><input type="password" class="content" id="pass" placeholder="Enter Password">
+            <br>
+            <input type="submit" class="button" value="Login">
+            <br>
         </form>
-    </div>
+        </div>
+ 
     
-    <script language="javascript">
-        function check(form)
+    <script type="text/javascript">
+        var login_attempts=3;
+        function check_form()
         {
-        
-        if(form.userid.value == "testuser" && form.pwd.value == "12345")
+        var name=document.getElementById("name").value;
+        var pass=document.getElementById("pass").value;
+        if(name=="testuser" && pass=="12345")
         {
-        
+        alert("SuccessFully Logged In");
+        document.getElementById("name").value="";
+        document.getElementById("pass").value="";
+        window.open("success.html")
         }
         else
         {
-            alert("Error Password or Username")
-            return false;
+        if(login_attempts==0)
+        {
+        alert("No Login Attempts Available");
+        }
+        else
+        {
+        login_attempts=login_attempts-1;
+        alert("Login Failed Now Only "+login_attempts+" Login Attempts Available");
+        if(login_attempts==0)
+        {
+            document.getElementById("name").disabled=true;
+            document.getElementById("pass").disabled=true;
+            document.getElementById("form1").disabled=true;
         }
         }
-    </script> 
-    </body>
+        }
+        
+        return false;
+        }   
+    </script>
+</body>
 </html>
